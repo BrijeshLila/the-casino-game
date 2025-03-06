@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAIR PLAY</title>
+  <link rel="icon" type="image/x-icon" href="./loyalty-program-header.webp">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  
+  <div class="container">
+    <div class="logo">
+      <img src="./loyalty-program-header.webp" style="width:120px;">
+    </div>
+    <!-- LOGIN PAGE -->
+    <div id="login-page" class="auth-box">
+      <h2>Sign In</h2>
+      <p>Please enter your login details here.</p>
+      <input type="text" placeholder="Username" id="login-username" />
+
+      <!-- Password field with toggle -->
+      <div class="password-wrapper">
+        <input type="password" placeholder="Password" id="login-password" />
+        <button type="button" id="toggle-password" onclick="togglePassword()">Show</button>
+      </div>
+
+      <button class="login-btn" onclick="loginUser()">LOGIN</button>
+      <p>Don't have an account? <a href="#" onclick="showSignUp()">Sign Up</a></p>
+    </div>
+
+    <!-- SIGNUP PAGE -->
+    <div id="signup-page" class="auth-box hidden">
+      <h2>Sign Up</h2>
+      <p>Create your account by filling in the details.</p>
+      <input type="text" placeholder="Username" id="signup-username" />
+      <input type="password" placeholder="Password" id="signup-password" />
+
+      <!-- CAPTCHA Section -->
+      <div class="captcha-container">
+        <div class="captcha-display" id="captcha-code">CAPTCHA</div>
+        <button class="refresh-btn" onclick="generateCaptcha()">Refresh</button>
+      </div>
+      <input type="text" placeholder="Enter Captcha" id="captcha-input" />
+
+      <button class="signup-btn" onclick="signUpUser()">SIGN UP</button>
+      <p>Already have an account? <a href="#" onclick="showLogin()">Sign In</a></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

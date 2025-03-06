@@ -1,0 +1,183 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #1e2a47, #26314b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+    overflow: hidden;
+  }
+  
+  /* Container Styles */
+  .container {
+    position: relative;
+    width: 380px;
+    max-width: 90%; /* Ensures the container doesn't overflow on small screens */
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transform: scale(0.95);
+    animation: scaleUp 0.5s ease-out;
+  }
+  
+  /* Animation */
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Auth Box */
+  .auth-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Input Fields */
+  input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: #222;
+    color: #ddd;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #ff7f50;
+    background-color: #333;
+    outline: none;
+  }
+  
+  /* Password Wrapper and Toggle Button */
+  .password-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 12px 0;
+  }
+  
+  .password-wrapper input {
+    width: 100%;
+    padding-right: 60px; /* Space for the toggle button */
+  }
+  
+  #toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #ff7f50;
+    cursor: pointer;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  /* Buttons */
+  .login-btn, .signup-btn {
+    width: 100%;
+    background: linear-gradient(to right, #ff7f50, #ff6347);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-btn:hover, .signup-btn:hover {
+    background: linear-gradient(to right, #ff6347, #ff7f50);
+  }
+  
+  /* Link Styling */
+  a {
+    color: #ff7f50;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #ff6347;
+  }
+  
+  /* Headings and Paragraphs */
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  /* CAPTCHA Styling */
+  .captcha-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .captcha-display {
+    background: #333;
+    padding: 8px 12px;
+    margin-right: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  .refresh-btn {
+    background: #ff7f50;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .refresh-btn:hover {
+    background: #ff6347;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .container {
+      width: 100%;
+      padding: 20px;
+    }
+    input, .login-btn, .signup-btn {
+      font-size: 16px;
+    }
+  }
+  
