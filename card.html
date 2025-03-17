@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-Low Card Game</title>
+    <link rel="stylesheet" href="card.css">
+</head>
+
+<body>
+    <div class="wallet">Balance: ₹<span id="balance">1000</span></div>
+
+    <div class="game-container">
+        <h1>High-Low Card Game</h1>
+
+        <!-- Bet Input -->
+        <input type="text" id="bet-amount" placeholder="Enter bet amount" min="10" oninput="checkConditions()">
+
+        <!-- Player Selection -->
+        <div class="player-buttons">
+            <button id="player1-btn" onclick="selectPlayer(1)">Player 1</button>
+            <button id="player2-btn" onclick="selectPlayer(2)">Player 2</button>
+        </div>
+
+        <!-- Card Display -->
+        <div class="card-container">
+            <div class="card" id="player1-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <span class="card-rank" id="player1-rank"></span>
+                        <span class="card-suit" id="player1-suit"></span>
+                    </div>
+                    <div class="card-back">?</div>
+                </div>
+            </div>
+            <div class="card" id="player2-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <span class="card-rank" id="player2-rank"></span>
+                        <span class="card-suit" id="player2-suit"></span>
+                    </div>
+                    <div class="card-back">?</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flip Button -->
+        <button id="flip-btn" onclick="flipCards()" disabled>Flip Cards</button>
+    </div>
+
+    <!-- Popup Result Box -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p id="popup-message"></p>
+            <button onclick="closePopup()">OK</button>
+        </div>
+    </div>
+    <header>
+        <button class="back-btn" onclick="goBack()">← Back</button>
+    </header>
+
+    <script src="card.js"></script>
+</body>
+
+</html>

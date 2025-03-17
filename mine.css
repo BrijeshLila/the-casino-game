@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #0a1f44;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+.wallet-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+    background: #333;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.game-container {
+    margin-top: 50px;
+}
+
+.bet-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+input {
+    padding: 10px;
+    outline: 0.5px solid white;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1d1f2468;
+    color: aliceblue;
+}
+
+button {
+    background-color: gold;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: darkgoldenrod;
+}
+
+.multiplier-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.multiplier {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.box {
+    width: 60px;
+    height: 60px;
+    background: #2671cb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
+
+.box.diamond {
+    background: green;
+    animation: blink 0.5s ease-in-out;
+}
+
+.box.bomb {
+    background: red;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#cashOut {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    background: #28a745;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 10px;
+    display: none;
+}
+
+#cashOut:hover {
+    background: #218838;
+}
+.back-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: transparent;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.back-btn:hover {
+    background: #374864;
+}

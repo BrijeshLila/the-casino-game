@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="contact.css">
+
+</head>
+
+<body>
+    <header>
+        <button class="back-btn" onclick="goBack()">← Back</button>
+    </header>
+    <div class="img11">
+        <img src="./loyalty-program-header-removebg-preview.png" class="img1">
+    </div>
+    <div class="container">
+        <h1>Contact US form</h1>
+        <form>
+            <div class="div1">
+                <input type="text" id="name" placeholder="First name" required>
+                <input type="text" id="name" placeholder="User Id" required>
+            </div>
+            <div class="div1">
+                <input type="text" id="number" placeholder="phone" required>
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+
+
+            <textarea required id="name" placeholder="text"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <script>
+        function goBack() {
+            window.location.href = "dashboard.html"; // Redirects to the dashboard
+        }
+    </script>
+</body>
+
+</html>

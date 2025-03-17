@@ -1,0 +1,134 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+    animation: fadeIn 1.5s ease-out; /* Page load fade-in animation */
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly dark background */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    color: white;
+    transform: scale(0.8);
+    animation: popUp 1s ease-out forwards; /* Page load pop-up effect */
+}
+
+.dice-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px; /* Adds space between dice */
+}
+
+.dice {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #ff6a00, #ff6f91); /* Dice gradient */
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transform-origin: center;
+    transition: transform 2s ease-out; /* Smooth rotation */
+}
+
+.dice span {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.dice h3 {
+    position: absolute;
+    top: -20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button {
+    background: linear-gradient(135deg, #42e695, #3bb2b8); /* Vibrant button color */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 30px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:disabled {
+    background: #ddd;
+    cursor: not-allowed;
+}
+
+button:hover:enabled {
+    background: linear-gradient(135deg, #3bb2b8, #42e695); /* Button hover effect */
+    transform: scale(1.05);
+}
+
+#result {
+    margin-top: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #f39c12;
+}
+
+#countdown {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #e74c3c;
+}
+.back-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: transparent;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.back-btn:hover {
+    background: red;
+}
+
+
+/* Animation for page load (fade-in effect) */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation for container pop-up effect */
+@keyframes popUp {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

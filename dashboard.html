@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <img src="./loyalty-program-header-removebg-preview.png" alt="" style="width: 100px;">
+        <h1>Welcome to Casino Games</h1>
+        
+        <!-- <div class="wallet">Wallet: <span id="walletBalance">$1000</span></div> -->
+        <a href="./contact.html" class="contact">Contact Us</a>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <div class="games-container">
+        <div class="game-box" onclick="openGame('dice.html')">
+            <img src="./images.jpeg" alt="Dice Game">
+            <p>Dice Game</p>
+        </div>
+        <div class="game-box" onclick="openGame('color.html')">
+            <img src="./compressed_3d5c4402a3f81b12a1c1dad477d6763d.webp" alt="Color Game">
+            <p>Color Game</p>
+        </div>
+        <div class="game-box" onclick="openGame('card.html')">
+            <img src="./poker-game-background-with-playing-cards_1017-33703.avif" alt="Card Game">
+            <p>Card Game</p>
+        </div>
+        <div class="game-box" onclick="openGame('mine.html')">
+            <img src="./mine.jpeg" alt="Mine Game">
+            <p>Mine Game</p>
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            localStorage.removeItem("loggedInUser");
+            window.location.href = "index.html";
+        }
+
+        function openGame(gameUrl) {
+            window.open(gameUrl, "_blank");
+        }
+
+        if (!localStorage.getItem("loggedInUser")) {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino Treasure Game</title>
+    <link rel="stylesheet" href="mine.css">
+</head>
+
+<body>
+    <div class="wallet-container">
+        Wallet: $<span id="currentBalance">1000</span>
+    </div>
+    <div class="game-container">
+        <div class="bet-container">
+            <input type="text" id="betAmount" placeholder="Enter bet amount">
+            <button id="startGame">Start</button>
+        </div>
+
+        <div class="multiplier-container" id="multiplierDisplay"></div>
+
+        <div class="grid" id="gameBoard"></div>
+
+        <button id="cashOut" style="display: none;">Cash Out</button>
+    </div>
+
+    <div class="popup" id="resultPopup"></div>
+
+    <script src="mine.js"></script>
+    <header>
+        <button class="back-btn" onclick="goBack()">← Back</button>
+    </header>
+</body>
+
+</html>
